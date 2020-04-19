@@ -15,14 +15,14 @@ const BottomTabs = () => {
         name="Home"
         component={HomeStack}
         options={{
-          tabIcon: "home",
+          tabIcon: "ios-home",
         }}
       />
       <TabBottom.Screen
         name="Settings"
         component={SettingsStack}
         options={{
-          tabIcon: "settings",
+          tabIcon: "ios-settings",
         }}
       />
     </TabBottom.Navigator>
