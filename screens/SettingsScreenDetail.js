@@ -1,15 +1,15 @@
 import React from "react";
 
 import CustomHeader from "../components/CustomHeader";
-import { Content, Text } from "native-base";
+import { View, Text } from "react-native";
 
 const SettingsScreenDetail = ({ navigation }) => {
   return (
     <>
       <CustomHeader title="Settings Detail" navigation={navigation} />
-      <Content padder>
+      <View>
         <Text>Settings Detail</Text>
-      </Content>
+      </View>
     </>
   );
 };

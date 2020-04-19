@@ -1,35 +1,21 @@
 import React from "react";
-import {
-  Header,
-  Title,
-  Button,
-  Left,
-  Right,
-  Body,
-  Icon,
-  Text,
-} from "native-base";
+import { View, Button, Text } from "react-native";
 
 const CustomHeader = ({ title, isHome, navigation }) => {
   return (
-    <Header>
-      <Left>
+    <View>
+      <View>
         {isHome ? (
-          <Button transparent>
-            <Icon name="menu" />
-          </Button>
+          <Button title="MENU" />
         ) : (
-          <Button transparent onPress={() => navigation.goBack()}>
-            <Icon name="arrow-back" />
-            <Text>Back</Text>
-          </Button>
+          <Button title="BACK" onPress={() => navigation.goBack()} />
         )}
-      </Left>
-      <Body>
-        <Title>{title}</Title>
-      </Body>
-      <Right />
-    </Header>
+      </View>
+      <View>
+        <Text>{title}</Text>
+      </View>
+      <View />
+    </View>
   );
 };
 

@@ -2,10 +2,15 @@ import React from "react";
 import { Audio } from "expo-av";
 
 import CustomHeader from "../components/CustomHeader";
-import { View, TouchableOpacity, FlatList, StyleSheet } from "react-native";
-import { Content, Text, Icon } from "native-base";
+import {
+  View,
+  TouchableOpacity,
+  FlatList,
+  StyleSheet,
+  Text,
+} from "react-native";
 
-const RenderWords = ({ item }) => (
+const RenderRow = ({ item }) => (
   <View>
     <TouchableOpacity
       style={styles.item}
@@ -14,9 +19,6 @@ const RenderWords = ({ item }) => (
       <View>
         <Text style={styles.itemText}>{item.english}</Text>
         <Text style={styles.itemText}>{item.thai}</Text>
-      </View>
-      <View>
-        <Icon name="play" />
       </View>
     </TouchableOpacity>
   </View>
@@ -42,13 +44,13 @@ const HomeScreenDetail = ({ navigation, route }) => {
   return (
     <>
       <CustomHeader title={title} navigation={navigation} />
-      <Content padder>
+      <View>
         <FlatList
           data={words}
-          renderItem={({ item }) => <RenderWords item={item} />}
+          renderItem={({ item }) => <RenderRow item={item} />}
           keyExtractor={(item, index) => item + index}
         />
-      </Content>
+      </View>
     </>
   );
 };
@@ -66,7 +68,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   itemText: {
-    fontFamily: "Roboto",
+    // fontFamily: "Roboto",
     fontSize: 20,
   },
 });

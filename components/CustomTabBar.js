@@ -1,10 +1,10 @@
 import React from "react";
-import { Footer, FooterTab, Button, Icon, Text } from "native-base";
+import { View, Button } from "react-native";
 
-const CustomTabBar = ({ state, descriptors, navigation, icon }) => {
+const CustomTabBar = ({ state, descriptors, navigation }) => {
   return (
-    <Footer>
-      <FooterTab>
+    <View>
+      <View>
         {state.routes.map((route, index) => {
           const { options } = descriptors[route.key];
           const label =
@@ -37,6 +37,7 @@ const CustomTabBar = ({ state, descriptors, navigation, icon }) => {
 
           return (
             <Button
+              title={label}
               vertical
               onPress={onPress}
               onLongPress={onLongPress}
@@ -45,14 +46,11 @@ const CustomTabBar = ({ state, descriptors, navigation, icon }) => {
               accessibilityLabel={options.tabBarAccessibilityLabel}
               testID={options.tabBarTestID}
               key={index}
-            >
-              <Icon name={options.tabIcon} />
-              <Text>{label}</Text>
-            </Button>
+            />
           );
         })}
-      </FooterTab>
-    </Footer>
+      </View>
+    </View>
   );
 };
 
