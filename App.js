@@ -40,7 +40,7 @@ export default function App(props) {
   } else {
     return (
       <View style={styles.container}>
-        {Platform.OS === "ios" && <StatusBar barStyle="default" />}
+        <StatusBar backgroundColor="blue" barStyle="default" />
 
         <NavigationContainer
           ref={containerRef}
