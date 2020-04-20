@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Platform, StatusBar, StyleSheet, View } from "react-native";
+import { Platform, SafeAreaView, StatusBar, StyleSheet } from "react-native";
 import { SplashScreen } from "expo";
 import * as Font from "expo-font";
 import { Ionicons } from "@expo/vector-icons";
@@ -39,16 +39,15 @@ export default function App(props) {
     return null;
   } else {
     return (
-      <View style={styles.container}>
-        <StatusBar backgroundColor="blue" barStyle="default" />
-
+      <SafeAreaView style={styles.container}>
+        {Platform.OS === "ios" && <StatusBar barStyle="dark-content" />}
         <NavigationContainer
           ref={containerRef}
           initialState={initialNavigationState}
         >
           <BottomTabs />
         </NavigationContainer>
-      </View>
+      </SafeAreaView>
     );
   }
 }
