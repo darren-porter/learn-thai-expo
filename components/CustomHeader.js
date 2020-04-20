@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Button, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 const CustomHeader = ({ title, isHome, navigation }) => {

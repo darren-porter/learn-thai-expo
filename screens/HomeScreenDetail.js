@@ -10,8 +10,11 @@ import {
   Text,
 } from "react-native";
 
+import { Ionicons } from "@expo/vector-icons";
+import Colors from "../constants/Colors";
+
 const RenderRow = ({ item }) => (
-  <View>
+  <View style={styles.container}>
     <TouchableOpacity
       style={styles.item}
       onPress={() => tryPlay(item.audioFile)}
@@ -20,6 +23,7 @@ const RenderRow = ({ item }) => (
         <Text style={styles.itemText}>{item.english}</Text>
         <Text style={styles.itemText}>{item.thai}</Text>
       </View>
+      <Ionicons name="md-play-circle" size={30} color={Colors.tintColor} />
     </TouchableOpacity>
   </View>
 );
@@ -58,8 +62,12 @@ const HomeScreenDetail = ({ navigation, route }) => {
 export default HomeScreenDetail;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+  },
   item: {
-    padding: 10,
+    padding: 15,
     backgroundColor: "lightgray",
     marginVertical: 5,
     flexDirection: "row",
@@ -68,7 +76,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   itemText: {
-    // fontFamily: "Roboto",
     fontSize: 20,
   },
 });

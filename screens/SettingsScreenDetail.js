@@ -1,17 +1,22 @@
 import React from "react";
 
 import CustomHeader from "../components/CustomHeader";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
 const SettingsScreenDetail = ({ navigation }) => {
   return (
     <>
       <CustomHeader title="Settings Detail" navigation={navigation} />
-      <View>
-        <Text>Settings Detail</Text>
-      </View>
+      <View style={styles.container}></View>
     </>
   );
 };
 
 export default SettingsScreenDetail;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+  },
+});

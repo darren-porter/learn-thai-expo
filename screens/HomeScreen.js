@@ -1,12 +1,12 @@
 import React from "react";
 import CustomHeader from "../components/CustomHeader";
-import { View, Button } from "react-native";
+import { View, Button, StyleSheet } from "react-native";
 
 const HomeScreen = ({ navigation }) => {
   return (
     <>
       <CustomHeader title="Learn Thai" isHome={true} />
-      <View>
+      <View style={styles.container}>
         <Button
           title="BASICS"
           onPress={() =>
@@ -28,3 +28,10 @@ const HomeScreen = ({ navigation }) => {
 };
 
 export default HomeScreen;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+  },
+});
