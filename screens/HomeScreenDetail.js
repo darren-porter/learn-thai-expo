@@ -10,7 +10,7 @@ import {
   Text,
 } from "react-native";
 
-import { Ionicons } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
 import Colors from "../constants/Colors";
 
 const words = [
@@ -31,7 +31,7 @@ const RenderRow = ({ item }) => (
         <Text style={styles.itemText}>{item.english}</Text>
         <Text style={styles.itemText}>{item.thai}</Text>
       </View>
-      <Ionicons name="md-play-circle" size={30} color={Colors.tintColor} />
+      <AntDesign name="playcircleo" size={30} color={Colors.tintColor} />
     </TouchableOpacity>
   </View>
 );

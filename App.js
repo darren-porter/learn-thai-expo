@@ -2,7 +2,7 @@ import * as React from "react";
 import { Platform, SafeAreaView, StatusBar, StyleSheet } from "react-native";
 import { SplashScreen } from "expo";
 import * as Font from "expo-font";
-import { Ionicons } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
 
 import BottomTabs from "./navigation/BottomTabs";
@@ -20,8 +20,11 @@ export default function App(props) {
 
         // Load fonts
         await Font.loadAsync({
-          ...Ionicons.font,
-          "space-mono": require("./assets/fonts/SpaceMono-Regular.ttf"),
+          ...AntDesign.font,
+          "os-light": require("./assets/fonts/OpenSans-Light.ttf"),
+          "os-reg": require("./assets/fonts/OpenSans-Regular.ttf"),
+          "os-semi-bold": require("./assets/fonts/OpenSans-SemiBold.ttf"),
+          "os-bold": require("./assets/fonts/OpenSans-Bold.ttf"),
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service

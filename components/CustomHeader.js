@@ -2,6 +2,8 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
+import { Heading } from "../components/StyledText";
+
 const CustomHeader = ({ title, isHome, navigation }) => {
   return (
     <View style={styles.header}>
@@ -25,7 +27,7 @@ const CustomHeader = ({ title, isHome, navigation }) => {
         )}
       </View>
       <View style={styles.headerCenter}>
-        <Text style={styles.title}>{title}</Text>
+        <Heading style={styles.title}>{title}</Heading>
       </View>
       <View style={styles.headerRight} />
     </View>
@@ -55,8 +57,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   title: {
-    fontSize: 22,
-    fontWeight: "bold",
     textAlign: "center",
   },
   back: {

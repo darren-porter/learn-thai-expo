@@ -1,8 +1,35 @@
 import * as React from "react";
-import { Text } from "react-native";
+import { Text, StyleSheet } from "react-native";
 
 export function MonoText(props) {
   return (
-    <Text {...props} style={[props.style, { fontFamily: "space-mono" }]} />
+    <Text {...props} style={[props.style, { fontFamily: "os-semi-bold" }]} />
   );
 }
+
+export function Heading(props) {
+  return <Text {...props} style={[styles.heading, props.style]} />;
+}
+
+export function SubHeading(props) {
+  return <Text {...props} style={[styles.subHeading, props.style]} />;
+}
+
+export function Paragraph(props) {
+  return <Text {...props} style={[props.style, styles.paragraph]} />;
+}
+
+const styles = StyleSheet.create({
+  heading: {
+    fontSize: 20,
+    fontFamily: "os-bold",
+  },
+  subHeading: {
+    fontSize: 16,
+    fontFamily: "os-semi-bold",
+  },
+  paragraph: {
+    fontSize: 12,
+    fontFamily: "os-regular",
+  },
+});
