@@ -1,27 +1,14 @@
 import React from "react";
 import CustomHeader from "../components/CustomHeader";
-import { View, Button, StyleSheet } from "react-native";
+import CustomButton from "../components/CustomButton";
+import { View, StyleSheet } from "react-native";
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = () => {
   return (
     <>
       <CustomHeader title="Learn Thai" isHome={true} />
       <View style={styles.container}>
-        <Button
-          title="BASICS"
-          onPress={() =>
-            navigation.navigate("HomeDetail", {
-              title: "Basics",
-              words: [
-                {
-                  english: "hello",
-                  thai: "สวัสดี",
-                  audioFile: require("../assets/sounds/hello.mp3"),
-                },
-              ],
-            })
-          }
-        />
+        <CustomButton title="Basics" link="HomeDetail" />
       </View>
     </>
   );

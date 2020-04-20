@@ -1,17 +1,15 @@
 import React from "react";
 
 import CustomHeader from "../components/CustomHeader";
-import { View, Button, StyleSheet } from "react-native";
+import CustomButton from "../components/CustomButton";
+import { View, StyleSheet } from "react-native";
 
-const SettingsScreen = ({ navigation }) => {
+const SettingsScreen = () => {
   return (
     <>
       <CustomHeader title="Settings" isHome={true} />
       <View style={styles.container}>
-        <Button
-          title="DETAIL"
-          onPress={() => navigation.navigate("SettingsDetail")}
-        />
+        <CustomButton title="Detail" link="SettingsDetail" />
       </View>
     </>
   );

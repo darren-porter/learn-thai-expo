@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 const CustomHeader = ({ title, isHome, navigation }) => {
@@ -7,17 +7,21 @@ const CustomHeader = ({ title, isHome, navigation }) => {
     <View style={styles.header}>
       <View style={styles.headerLeft}>
         {isHome ? (
-          <Ionicons name="ios-menu" size={30} style={styles.headerIcon} />
+          <TouchableOpacity>
+            <Ionicons name="ios-menu" size={30} style={styles.headerIcon} />
+          </TouchableOpacity>
         ) : (
-          <View style={styles.back}>
+          <TouchableOpacity
+            style={styles.back}
+            onPress={() => navigation.goBack()}
+          >
             <Ionicons
               name="ios-arrow-back"
               size={30}
               style={styles.headerIcon}
-              onPress={() => navigation.goBack()}
             />
             <Text>Back</Text>
-          </View>
+          </TouchableOpacity>
         )}
       </View>
       <View style={styles.headerCenter}>

@@ -13,6 +13,14 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 import Colors from "../constants/Colors";
 
+const words = [
+  {
+    english: "hello",
+    thai: "สวัสดี",
+    audioFile: require("../assets/sounds/hello.mp3"),
+  },
+];
+
 const RenderRow = ({ item }) => (
   <View style={styles.container}>
     <TouchableOpacity
@@ -43,11 +51,9 @@ const tryPlay = async (audioFile) => {
 };
 
 const HomeScreenDetail = ({ navigation, route }) => {
-  const { title, words } = route.params;
-
   return (
     <>
-      <CustomHeader title={title} navigation={navigation} />
+      <CustomHeader title={"Basics"} navigation={navigation} />
       <View>
         <FlatList
           data={words}
