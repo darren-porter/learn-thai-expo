@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     paddingBottom: 8,
   },
   tabBarText: {
-    fontSize: 10,
+    fontSize: 14,
     textTransform: "uppercase",
   },
 });

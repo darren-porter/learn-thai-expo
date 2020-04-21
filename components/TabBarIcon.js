@@ -7,7 +7,7 @@ export default function TabBarItem(props) {
   return (
     <AntDesign
       name={props.name}
-      size={22}
+      size={26}
       style={styles.tabBarIcon}
       color={props.focused ? Colors.tabIconSelected : Colors.tabIconDefault}
     />
@@ -15,5 +15,5 @@ export default function TabBarItem(props) {
 }
 
 const styles = StyleSheet.create({
-  tabBarIcon: { marginBottom: 1 },
+  tabBarIcon: { marginBottom: 2 },
 });

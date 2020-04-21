@@ -21,15 +21,19 @@ export function Paragraph(props) {
 
 const styles = StyleSheet.create({
   heading: {
-    fontSize: 20,
+    fontSize: 28,
     fontFamily: "os-bold",
+    letterSpacing: -2,
   },
   subHeading: {
-    fontSize: 16,
+    fontSize: 17,
     fontFamily: "os-semi-bold",
+    letterSpacing: -0.5,
+    marginBottom: 4,
   },
   paragraph: {
-    fontSize: 12,
-    fontFamily: "os-regular",
+    fontSize: 14,
+    fontFamily: "os-semi-bold",
+    color: "gray",
   },
 });

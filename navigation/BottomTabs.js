@@ -12,7 +12,7 @@ const BottomTabs = ({}) => {
       <Tabs.Screen
         name="Home"
         options={{
-          tabIcon: "home",
+          tabIcon: "book",
         }}
         component={HomeStack}
       />

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, StyleSheet, TouchableOpacity } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 
 import { Heading } from "../components/StyledText";
@@ -30,8 +30,8 @@ export default CustomHeader;
 const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
-    height: 60,
-    marginTop: 20,
+    height: 70,
+    marginTop: 30,
   },
   headerIcon: {
     padding: 10,
