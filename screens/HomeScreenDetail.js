@@ -50,7 +50,7 @@ const tryPlay = async (audioFile) => {
   }
 };
 
-const HomeScreenDetail = ({ navigation, route }) => {
+const HomeScreenDetail = ({ navigation }) => {
   return (
     <>
       <CustomHeader title={"Basics"} navigation={navigation} />

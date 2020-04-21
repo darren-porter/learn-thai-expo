@@ -1,31 +1,29 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
-import CustomTabBar from "../components/CustomTabBar";
-
 import HomeStack from "./HomeStack";
 import SettingsStack from "./SettingsStack";
+import CustomTabBar from "../components/CustomTabBar";
 
-const TabBottom = createBottomTabNavigator();
+const Tabs = createBottomTabNavigator();
 
-const BottomTabs = () => {
+const BottomTabs = ({}) => {
   return (
-    <TabBottom.Navigator tabBar={(props) => <CustomTabBar {...props} />}>
-      <TabBottom.Screen
+    <Tabs.Navigator tabBar={(props) => <CustomTabBar {...props} />}>
+      <Tabs.Screen
         name="Home"
-        component={HomeStack}
         options={{
           tabIcon: "home",
         }}
+        component={HomeStack}
       />
-      <TabBottom.Screen
+      <Tabs.Screen
         name="Settings"
-        component={SettingsStack}
         options={{
           tabIcon: "setting",
         }}
+        component={SettingsStack}
       />
-    </TabBottom.Navigator>
+    </Tabs.Navigator>
   );
 };
 

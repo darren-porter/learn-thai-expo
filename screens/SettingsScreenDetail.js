@@ -1,7 +1,7 @@
 import React from "react";
 
 import CustomHeader from "../components/CustomHeader";
-import { View, Text, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 
 const SettingsScreenDetail = ({ navigation }) => {
   return (
