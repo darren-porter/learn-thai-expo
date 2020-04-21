@@ -8,11 +8,7 @@ const CustomHeader = ({ title, isHome, navigation }) => {
   return (
     <View style={styles.header}>
       <View style={styles.headerLeft}>
-        {isHome ? (
-          <TouchableOpacity>
-            <AntDesign name="menufold" size={30} style={styles.headerIcon} />
-          </TouchableOpacity>
-        ) : (
+        {isHome ? undefined : (
           <TouchableOpacity
             style={styles.back}
             onPress={() => navigation.goBack()}
@@ -34,7 +30,8 @@ export default CustomHeader;
 const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
-    height: 55,
+    height: 60,
+    marginTop: 20,
   },
   headerIcon: {
     padding: 10,
