@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
 
 import { Heading } from "../components/StyledText";
 
@@ -10,19 +10,14 @@ const CustomHeader = ({ title, isHome, navigation }) => {
       <View style={styles.headerLeft}>
         {isHome ? (
           <TouchableOpacity>
-            <Ionicons name="ios-menu" size={30} style={styles.headerIcon} />
+            <AntDesign name="menufold" size={30} style={styles.headerIcon} />
           </TouchableOpacity>
         ) : (
           <TouchableOpacity
             style={styles.back}
             onPress={() => navigation.goBack()}
           >
-            <Ionicons
-              name="ios-arrow-back"
-              size={30}
-              style={styles.headerIcon}
-            />
-            <Text>Back</Text>
+            <AntDesign name="back" size={30} style={styles.headerIcon} />
           </TouchableOpacity>
         )}
       </View>
